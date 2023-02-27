@@ -1,0 +1,139 @@
+#include <GL/glut.h>
+void draw(void)
+{
+	glClearColor(1.0, 1.0, 1.0, 1.0);
+	glClear(GL_COLOR_BUFFER_BIT);
+	
+	// Column - 1
+	glColor3f(0.93, 0, 0.55);
+	glBegin(GL_POLYGON);
+		glVertex2f(0.952,-1); //C
+		glVertex2f(0.81, -1); //D
+		glVertex2f(0.684, -0.317); //H
+		glVertex2f(0.72, -0.34); //E
+	glEnd();
+	glBegin(GL_POLYGON);
+		glVertex2f(0.684, -0.317); //H
+		glVertex2f(0.72, -0.34); //E
+		glVertex2f(1, 0.077); //F
+		glVertex2f(1, 0.125); //G
+	glEnd();
+
+	// Column - 2
+	glColor3f(0.74, 0.1, 0.55);
+	glBegin(GL_POLYGON);
+		glVertex2f(0.794, -1); //A
+		glVertex2f(0.615, -1); //I
+		glVertex2f(0.643, -0.295); //J
+		glVertex2f(0.678, -0.312); //K
+	glEnd();
+	glBegin(GL_POLYGON);
+		glVertex2f(0.643, -0.295); //J
+		glVertex2f(0.678, -0.312); //K
+		glVertex2f(1, 0.133); //L
+		glVertex2f(1, 0.185); //M
+	glEnd();
+
+	// Column - 3
+	glColor3f(0.57, 0.15, 0.56);
+	glBegin(GL_POLYGON);
+		glVertex2f(0.587, -1); //N
+		glVertex2f(0.346, -1); //O
+		glVertex2f(0.601, -0.271); //Q
+		glVertex2f(0.637, -0.291); //P
+	glEnd();
+	glBegin(GL_POLYGON);
+		glVertex2f(0.601, -0.271); //Q
+		glVertex2f(0.637, -0.291); //P
+		glVertex2f(1, 0.194); //R
+		glVertex2f(1, 0.248); //S
+	glEnd();
+
+	// Column - 4
+	glColor3f(0, 0.56, 0.83);
+	glBegin(GL_POLYGON);
+		glVertex2f(0.308, -1); //T
+		glVertex2f(-0.04, -1); //U
+		glVertex2f(0.562, -0.244); //W
+		glVertex2f(0.5967, -0.266); //V
+	glEnd();
+	glBegin(GL_POLYGON);
+		glVertex2f(0.562, -0.244); //W
+		glVertex2f(0.5967, -0.266); //V
+		glVertex2f(1, 0.255); //A1
+		glVertex2f(1, 0.315); //Z
+	glEnd();
+
+	// Column - 5
+	glColor3f(0, 0.67, 0.93);
+	glBegin(GL_POLYGON);
+		glVertex2f(-0.1, -1); //B1
+		glVertex2f(-0.641, -1); //C1
+		glVertex2f(0.517, -0.224); //E1
+		glVertex2f(0.555, -0.240); //D1
+	glEnd();
+	glBegin(GL_POLYGON);
+		glVertex2f(0.517, -0.224); //E1
+		glVertex2f(0.555, -0.240); //D1
+		glVertex2f(1, 0.325); //A1
+		glVertex2f(1, 0.387); //Z
+	glEnd();
+
+	// Column - 6
+	glColor3f(0.97, 0.57, 0.11);
+	glBegin(GL_POLYGON);
+		glVertex2f(-0.734, -1); //H1
+		glVertex2f(-1, -1); //I1
+		glVertex2f(-1, -0.738); //J1
+		glVertex2f(0.473, -0.2); //K1
+		glVertex2f(0.508, -0.220); //L1
+	glEnd();
+	glBegin(GL_POLYGON);
+		glVertex2f(0.473, -0.2); //K1
+		glVertex2f(0.508, -0.220); //L1
+		glVertex2f(1, 0.398); //M1
+		glVertex2f(1, 0.471); //N1
+	glEnd();
+	
+	// Column - 7
+	glColor3f(0.99, 0.76, 0.04);
+	glBegin(GL_POLYGON);
+		glVertex2f(-1, -0.7); //O1
+		glVertex2f(-1, -0.436); //P1
+		glVertex2f(0.427, -0.176); //Q1
+		glVertex2f(0.462, -0.196); //R1
+	glEnd();
+	glBegin(GL_POLYGON);
+		glVertex2f(0.427, -0.176); //Q1
+		glVertex2f(0.462, -0.196); //R1
+		glVertex2f(1, 0.48); //S1
+		glVertex2f(1, 0.564); //T1
+	glEnd();
+
+	// Column - 8
+	glColor3f(0.99, 0.95, 0);
+	glBegin(GL_POLYGON);
+		glVertex2f(-1, -0.407); //U1
+		glVertex2f(-1, -0.227); //V1
+		glVertex2f(0.383, -0.148); //W1
+		glVertex2f(0.421, -0.171); //Z1
+	glEnd();
+	glBegin(GL_POLYGON);
+		glVertex2f(0.383, -0.148); //W1
+		glVertex2f(0.421, -0.171); //Z1
+		glVertex2f(1, 0.573); //S1
+		glVertex2f(1, 0.669); //T1
+	glEnd();
+
+	glFlush();
+}
+int main(int argc, char** argv) {
+	glutInit(&argc, argv);
+	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGBA);
+	glutInitWindowSize(400, 400);
+	glutInitWindowPosition(100, 100);
+	glutCreateWindow("Barba Navarro Luis Rodrigo - 20490687");
+	glutDisplayFunc(draw);
+	glutMainLoop();
+	return 0;
+}
